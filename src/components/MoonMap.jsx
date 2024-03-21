@@ -40,12 +40,6 @@ export default function MoonMap() {
 
   return (
     <div className="moonmap__area" id='roadmap' data-aos="fade-up">
-      <figure className='road_map_leftstar'>
-        <img src={roadMapLeftStar} alt="" />
-      </figure>
-      <figure className='road_map_rightstar'>
-        <img src={roadMapRightStar} alt="" />
-      </figure>
       <Container>
         <Row className='service_items'>
             <Col md={6}>
@@ -110,11 +104,14 @@ export default function MoonMap() {
                 </div>
             </Col>
         </Row>
-        <Row className="align-items-center">
+        <Row className="align-items-center" data-aos="fade-up">
             <Col lg={7} md={6} className="order-md-1 order-2">
-              <figure className="phase3Img">
+              <div className="phase3Img">
+                <figure className='road_map_leftstar'>
+                  <img src={roadMapLeftStar} alt="" />
+                </figure>
                 <img src={phase3_img} alt="" />
-              </figure>
+              </div>
             </Col>
             <Col lg={5} md={6} className="order-md-2 order-1">
             <div className="moonapp_content">

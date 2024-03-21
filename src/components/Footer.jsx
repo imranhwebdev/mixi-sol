@@ -10,7 +10,7 @@ export default function Footer() {
 
   return (
     <footer className="footer">
-      <Container>
+      <Container className="footer-wrapper">
         <Row className="justify-content-center">
           <Col sm="8">
             <div className="footer__content__area text-center">
@@ -23,13 +23,13 @@ export default function Footer() {
             </div>
           </Col>
         </Row>
+        <figure className="footer_left_star">
+          <img src={footerLeftStar} alt="" />
+        </figure>
+        <figure className="footer_right_star">
+          <img src={footerRightStar} alt="" />
+        </figure>
       </Container>
-      <figure className="footer_left_star">
-        <img src={footerLeftStar} alt="" />
-      </figure>
-      <figure className="footer_right_star">
-        <img src={footerRightStar} alt="" />
-      </figure>
     </footer>
   );
 }

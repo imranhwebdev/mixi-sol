@@ -36,12 +36,6 @@ export default function Banner() {
       <figure className="banner__shap2">
         <img src={heroshap2} alt="" />
       </figure>
-      <figure className='a_star1'>
-          <img src={star1} alt="Mixi about star" />
-      </figure>
-      <figure className='a_star2'>
-          <img src={star2} alt="Mixi about star" />
-      </figure>
       <Container>
         <Row>
           <Col lg={5} md={6}>
@@ -66,7 +60,16 @@ export default function Banner() {
           </Col>
           <Col lg={7} md={6} className="text-end">
             
-            <div className="about-left">
+            <div className="about-right">
+                <figure className='a_star1'>
+                    <img src={star1} alt="Mixi about star" />
+                </figure>
+                <figure className='a_star2'>
+                    <img src={star1} alt="Mixi about star" />
+                </figure>
+                <figure className='a_star3'>
+                    <img src={star2} alt="Mixi about star" />
+                </figure>
               <figure className="about__img">
                   <img src={AboutLefttImg} alt="" />
               </figure>
