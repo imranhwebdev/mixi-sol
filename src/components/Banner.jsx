@@ -23,11 +23,11 @@ export default function Banner() {
     },
     {
       icon: <FaInstagram />,
-      url: "https://www.instagram.com/",
+      url: "https://instagram.com/mixicoin",
     },
     {
       imageSrc: sociallogo4,
-      url: "https://www.tiktok.com/",
+      url: "https://www.tiktok.com/mixicoin",
     },
   ];
 

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import AOS from 'aos';
 import { Col, Container, Row } from 'react-bootstrap';
+import { FaClipboardCheck  } from "react-icons/fa";
 import BgVideo from '../assets/mixi.mp4'
-import SectionTitle from './SectionTitle';
 import phase1_img from '../assets/img/phase1-img.png';
 import phase2_img from '../assets/img/phase2-img.png';
 import phase3_img from '../assets/img/phase3-img.png';
-import quarcodeimg from '../assets/img/quar_code.png';
+import copyTxt from '../assets/img/copyTxt.png';
 import roadMapLeftStar from '../assets/img/download_left_star.png';
 import roadMapRightStar from '../assets/img/download_right_star.png';
 import ReactPlayer from 'react-player';
@@ -26,8 +26,17 @@ export default function MoonMap() {
   const title = "about $mixi";
   const desc = "Missed the Doge? Shiba? Dogelon Mars? And others? Missed Pepe this year? Did you also miss copies of them that weren't all made just for the community? But you can still be strong part of the new community? Yes? Either way, Mixi, the magic cosmo cat, was born to connect all communities and open the gateway to unbelievable gains and takeover the meme space with secret formulas.";
 
-  const download_text = "DOWNLOAD PACK";
-  const download_link = "https://drive.google.com/file/d/1crio1uVDNu6z4XAcLVcKghx1dci3YRto/view?usp=sharing";
+  const [textToCopy, setTextToCopy] = useState('So11111111111111111111111111111111111111112');
+  const [isCopied, setIsCopied] = useState(false);
+  const handleCopyToClipboard = () => {
+      navigator.clipboard.writeText(textToCopy)
+        .then(() => {
+          setIsCopied(true);
+        })
+        .catch(err => {
+          console.error('Failed to copy to clipboard: ', err);
+        });
+    };
 
   return (
     <div className="moonmap__area" id='roadmap' data-aos="fade-up">
@@ -38,22 +47,18 @@ export default function MoonMap() {
         <img src={roadMapRightStar} alt="" />
       </figure>
       <Container>
-        <SectionTitle
-          title='MOON MAP'
-          des='Mixi is using Starship rocket and AI power on our joint space mission.'
-        />
         <Row className='service_items'>
             <Col md={6}>
-              <div className="moonapp_content">
-                <h3 className='mb-3'>PHASE 1</h3>
+              <div className="moonapp_content one">
+                <h3 className='mb-3'>Phase 1</h3>
                 <figure className='phase__img'>
                     <img src={phase1_img} alt="" />
                 </figure>
               </div>
             </Col>
             <Col md={6}>
-              <div className="moonapp_content">
-                <h3 className='mb-3'>PHASE 2</h3>
+              <div className="moonapp_content two">
+                <h3 className='mb-3'>Phase 2</h3>
                 <figure className='phase__img'>
                     <img src={phase2_img} alt="" />
                 </figure>
@@ -61,8 +66,8 @@ export default function MoonMap() {
             </Col>
         </Row>
         <Row className='quear_code_area justify-content-center'>
-            <Col md={8}>
-                <figure className='moonmap_bottom_left_img'>
+            <Col className="text-center">
+                <div className='moonmap_bottom_left_img'>
                   <ReactPlayer
                       key={key}
                       url={BgVideo} // replace with your video URL
@@ -75,24 +80,47 @@ export default function MoonMap() {
                       onEnded={handleVideoEnded}
                       controls={false} 
                     />
-                </figure>
+                </div>
                 <div className="content">
-                  <h2>VIBE, SHILL, HOLD, EVERYBODY HOLD</h2>
+                  <h4>VIBE, SHILL, HOLD, EVERYBODY HOLD</h4>
+                  <div className="tokenomics_copyTxt copytoclipboard">
+                     <div className="token-info">
+                      <span className='c_title'>Contract Address:</span> 
+                      <div className="tNumber">
+                        <input readOnly type="text"  value={textToCopy}
+                              onChange={(e) => setTextToCopy(e.target.value)} />
+                          <button onClick={handleCopyToClipboard}>
+                            {!isCopied && (
+                              <span>
+                                <img src={copyTxt} alt="Copy Text" />
+                              </span>
+                            )}
+                            {isCopied && (
+                              <span className='copyed'>
+                                <FaClipboardCheck  />
+                              </span>
+                            )}
+                        </button>
+                      </div>
+                     
+                     </div>
+                  </div>
+                  
                   <a target='_blank' href="#" className='boxed__btn lg'>BUY NOW</a>
                 </div>
             </Col>
         </Row>
         <Row className="align-items-center">
-            <Col lg={7}>
-              <div className="moonapp_content">
-                <figure className='phase__img'>
-                    <img src={phase3_img} alt="" />
-                </figure>
-              </div>
+            <Col lg={7} md={6} className="order-md-1 order-2">
+              <figure className="phase3Img">
+                <img src={phase3_img} alt="" />
+              </figure>
             </Col>
-            <Col lg={5}>
-                <h3 className='mb-3'>PHASE 3</h3>
+            <Col lg={5} md={6} className="order-md-2 order-1">
+            <div className="moonapp_content">
+              <h3 className='mb-3'>Phase 3</h3>
                 <p>Space Overtake...</p>
+              </div>
             </Col>
         </Row>
       </Container>

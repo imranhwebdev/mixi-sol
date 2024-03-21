@@ -1,6 +1,6 @@
 import { React } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import siteLogo from "../assets/img/Logo.svg";
+import siteLogo from "../assets/img/footer-logo.png";
 import footerLeftStar from "../assets/img/footer-left-star.png";
 import footerRightStar from "../assets/img/footer-right-star.png";
 export default function Footer() {

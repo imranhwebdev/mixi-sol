@@ -13,12 +13,15 @@
         backdrop-filter: blur(208px);
     }
     @include sm {
-        padding-top: 15px;
+        padding: 12px 0;
     }
     & .header__logo{
         max-width: 174px;
         @include mmd{
             max-width: 150px;
+        }
+        @include sm{
+            max-width: 120px;
         }
     }
     @include mmd {
