@@ -2,57 +2,80 @@
     position: relative;
     z-index: 1;
     padding: 44px 0;
-    @include mmd{
+    @include mmd {
         padding: 40px 0;
     }
-    @include sm{
+    @include sm {
         padding: 30px 0;
+        margin-top: 30px;
     }
     & .footer__content__area {
-        & .footer__logo{
+        & .footer__logo {
             margin-bottom: 28px;
             display: inline-block;
-           & img{
+            @include sm {
+                height: 50px;
+                margin-bottom: 20px;
+            }
+            & img {
                 max-width: 261px;
+                @include sm {
+                    height: 100%;
+                }
             }
         }
-        
-        & p{
+        & p {
             @include font-22;
             font-weight: 400;
+            @include ssm {
+                font-size: 16px;
+            }
         }
-        .copy__right{
+        .copy__right {
             font-weight: 600;
             display: inline-block;
             margin-top: 11px;
+            @include sm {
+                font-weight: 500;
+                font-size: 14px;
+                margin-top: 24px;
+            }
         }
-        & .social__media{
+        & .social__media {
             margin-top: 32px;
             margin-bottom: 45px;
-            @include sm{
+            @include sm {
                 margin-bottom: 20px;
             }
         }
     }
-    & .footer_left_star{
+    & .footer_left_star {
         position: absolute;
         left: 0px;
         bottom: -10px;
         max-width: 120px;
         z-index: -1;
         animation: zoom-in-out 3s ease-in-out infinite;
+        @include ssm {
+            display: none;
+        }
     }
-    & .footer_right_star{
+    & .footer_right_star {
         position: absolute;
         right: 0px;
         bottom: 40px;
         max-width: 120px;
         z-index: -1;
         animation: zoom-in-out 4s ease-in-out infinite;
+        @include ssm {
+            display: none;
+        }
     }
 }
-.footer-wrapper{
+
+.footer-wrapper {
     position: relative;
 }
+
 
 /* Footer css */
