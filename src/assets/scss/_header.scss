@@ -1,0 +1,101 @@
+.heading {
+    padding: 16px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    background: rgba(68, 84, 178, 0.10);
+    box-shadow: 0px 4px 5.3px 0px rgba(25, 34, 86, 0.20);
+    backdrop-filter: blur(8px);
+    @include mmd {
+        background: rgba(68, 84, 178, 0.110);
+        backdrop-filter: blur(208px);
+    }
+    @include sm {
+        padding-top: 15px;
+    }
+    & .header__logo{
+        max-width: 174px;
+        @include mmd{
+            max-width: 150px;
+        }
+    }
+    @include mmd {
+        .navbar-toggler {
+            background: $_white;
+            padding: 6px;
+        }
+        .navbar-collapse {
+            padding: 25px 10px 20px 10px;
+            & .navbar-nav {
+                & a {
+                    border-bottom: 1px solid #f3f3f321;
+                    padding: 15px 0;
+                }
+            }
+        }
+        & .navbar-nav {
+            display: inherit;
+            & .boxed__btn {
+                margin-top: 15px;
+                display: inline-block;
+                @include mmd{
+                    padding: 15px 35px !important;
+                    margin-top: 20px;
+                    line-height: 1;
+                }
+                @include sm{
+                    padding: 15px 25px !important;
+                    margin-top: 20px;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+}
+
+.navbar-nav {
+    & a {
+        font-family: 'Krungthep', sans-serif;
+        display: block;
+        color: #BEC1D6 !important;
+        @include font-16;
+        padding:13px 16px;
+        cursor: pointer;
+        text-transform: uppercase;
+        &:hover,
+        &.active,
+        &:focus {
+            color: #fff !important;
+        }
+    }
+    & .boxed__btn{
+        margin-left: 15px;
+        min-width: 132px;
+        @include font-18;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff !important;
+        text-transform: capitalize;
+        &:hover{
+            color: #231F20 !important;
+        }
+        
+        @include mmd{
+            border-bottom: 1px solid #fff !important;
+            margin-left: 0;
+        }
+    }
+}
+
+.heading.fixed{
+    position: fixed;
+    background: rgba(68, 84, 178, 0.10);
+    box-shadow: 0px 4px 5.3px 0px rgba(25, 34, 86, 0.20);
+    backdrop-filter: blur(20px);
+    padding: 10px 0;
+    transition: all .3s ease-in-out;
+}

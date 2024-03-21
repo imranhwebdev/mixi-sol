@@ -1,0 +1,137 @@
+@mixin transition {
+    transition: all .3s ease-in-out;
+}
+@mixin border__radius__42 {
+    border-radius: 42px;
+    @include sm{
+        border-radius: 15px;
+    }
+}
+
+
+@mixin font-140 {
+    font-size: 140px;
+    line-height: 120%;
+    @include xxl {
+        font-size: 100px;
+    }
+    @include xl {
+        font-size: 90px;
+    }
+    @include lg {
+        font-size: 80px;
+    }
+    @include md {
+        font-size: 70px;
+    }
+    @include sm {
+        font-size: 60px;
+    }
+}
+
+
+@mixin font-85 {
+    font-size: 85px;
+    line-height: 120%;
+    @include lg {
+        font-size: 65px;
+    }
+    @include md {
+        font-size: 55px;
+    }
+    @include sm {
+        font-size: 45px;
+    }
+}
+
+
+
+@mixin font-35 {
+    font-size: 35px;
+    line-height: 120%;
+    @include lg {
+        font-size: 30px;
+    }
+    @include md {
+        font-size: 28px;
+    }
+    @include sm {
+        font-size: 25px;
+    }
+}
+
+
+@mixin font-32 {
+    font-size: 32px;
+    line-height: 160%;
+    @include lg {
+        font-size: 26px;
+    }
+    @include md {
+        font-size: 24px;
+    }
+    @include sm {
+        font-size: 22px;
+    }
+}
+
+
+@mixin font-28 {
+    font-size: 28px;
+    line-height: 160%;
+    @include lg {
+        font-size: 25px;
+    }
+    @include md {
+        font-size: 23px;
+    }
+    @include sm {
+        font-size: 20px;
+    }
+}
+
+
+
+@mixin font-22 {
+    font-size: 22px;
+    line-height: 160%;
+    @include lg {
+        font-size: 20px;
+    }
+    @include md {
+        font-size: 18px;
+    }
+    @include sm {
+        font-size: 18px;
+    }
+}
+
+@mixin font-20 {
+    font-size: 20px;
+    line-height: calc(30px/20px);
+    @include lg {
+        font-size: 18px;
+    }
+    @include md {
+        font-size: 18px;
+    }
+    @include sm {
+        font-size: 16px;
+    }
+}
+
+@mixin font-18 {
+    font-size: 18px;
+    line-height: calc(27px/18px);
+    @include mmd {
+        font-size: 16px;
+    }
+}
+
+@mixin font-16 {
+    font-size: 16px;
+    line-height: 160%;
+    @include mmd {
+        font-size: 15px;
+    }
+}

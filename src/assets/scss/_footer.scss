@@ -1,0 +1,53 @@
+.footer {
+    position: relative;
+    z-index: 1;
+    padding: 98px 0;
+    @include mmd{
+        padding: 70px 0;
+    }
+    @include sm{
+        padding: 50px 0;
+    }
+    @include ssm{
+        padding: 30px 0;
+    }
+    & .footer__content__area {
+        & .footer__logo{
+            margin-bottom: 18px;
+            display: inline-block;
+           & img{
+                max-width: 174px;
+            }
+        }
+        
+        & p{
+            @include font-22;
+        }
+        & .social__media{
+            margin-top: 32px;
+            margin-bottom: 45px;
+            @include sm{
+                margin-bottom: 20px;
+            }
+        }
+    }
+    & .footer_left_star{
+        position: absolute;
+        left: 0;
+        bottom: 20px;
+        max-width: 120px;
+        z-index: -1;
+        animation: zoom-in-out 3s ease-in-out infinite;
+    }
+    & .footer_right_star{
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+        max-width: 120px;
+        z-index: -1;
+        animation: zoom-in-out 4s ease-in-out infinite;
+    }
+}
+
+
+/* Footer css */
