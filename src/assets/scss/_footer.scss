@@ -37,7 +37,7 @@
             margin-top: 11px;
             @include sm {
                 font-weight: 500;
-                font-size: 14px;
+                font-size: 18px;
                 margin-top: 24px;
             }
         }
@@ -77,5 +77,10 @@
     position: relative;
 }
 
-
+.copy__right br{
+    display: none;
+    @include sm{
+        display: block;
+    }
+}
 /* Footer css */

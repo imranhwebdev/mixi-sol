@@ -343,6 +343,9 @@
                 }
                 img{
                     max-width: 40px;
+                    @include sm{
+                        margin-top: -3px;
+                    }
                 }
 
             }

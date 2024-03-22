@@ -1,12 +1,12 @@
 import { React } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import siteLogo from "../assets/img/footer-logo.png";
+import siteLogo from "../assets/img/footer-logo.svg";
 import footerLeftStar from "../assets/img/footer-left-star.png";
 import footerRightStar from "../assets/img/footer-right-star.png";
 export default function Footer() {
   const footerLeftDesc = "Everything is only as strong as the community!";
   const currentYear = new Date().getFullYear();
-  const Copyright = `Copyright @ ${currentYear}  MIXI Coin. All rights reserved. Fun mixer started.`;
+  const Copyright = `Copyright @ ${currentYear}  MIXI Coin.<br/> All rights reserved. Fun mixer started.`;
 
   return (
     <footer className="footer">
@@ -19,7 +19,8 @@ export default function Footer() {
               </a>
               <p>{footerLeftDesc}</p>
 
-              <p className="copy__right">{Copyright}</p>
+              <p className="copy__right" dangerouslySetInnerHTML={{ __html: Copyright }} />
+              
             </div>
           </Col>
         </Row>
