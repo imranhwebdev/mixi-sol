@@ -31,6 +31,10 @@
             }
         }
         .footer-top-text{
+            @include sm{
+                font-weight: 500;
+                font-size: 18px;
+            }
             br{
                 display: none;
                 @include sm{
