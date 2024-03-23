@@ -7,20 +7,19 @@
     }
     @include sm {
         padding: 30px 0;
-        margin-top: 30px;
+        margin-top: 0px;
     }
     & .footer__content__area {
         & .footer__logo {
             margin-bottom: 28px;
             display: inline-block;
             @include sm {
-                height: 50px;
                 margin-bottom: 20px;
             }
             & img {
                 max-width: 261px;
                 @include sm {
-                    height: 100%;
+                    max-width: 120px;
                 }
             }
         }
@@ -31,14 +30,22 @@
                 font-size: 16px;
             }
         }
+        .footer-top-text{
+            br{
+                display: none;
+                @include sm{
+                    display: block;
+                }
+            }
+        }
         .copy__right {
             font-weight: 600;
             display: inline-block;
             margin-top: 11px;
             @include sm {
-                font-weight: 500;
-                font-size: 18px;
-                margin-top: 24px;
+                font-weight: 400;
+                font-size: 14px;
+                margin-top: 16px;
             }
         }
         & .social__media {

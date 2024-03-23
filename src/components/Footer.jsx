@@ -4,7 +4,7 @@ import siteLogo from "../assets/img/footer-logo.svg";
 import footerLeftStar from "../assets/img/footer-left-star.png";
 import footerRightStar from "../assets/img/footer-right-star.png";
 export default function Footer() {
-  const footerLeftDesc = "Everything is only as strong as the community!";
+  const footerLeftDesc = "Everything is only as strong <br /> as the community!";
   const currentYear = new Date().getFullYear();
   const Copyright = `Copyright @ ${currentYear}  MIXI Coin.<br/> All rights reserved. Fun mixer started.`;
 
@@ -17,7 +17,7 @@ export default function Footer() {
               <a href="/" className="footer__logo">
                 <img src={siteLogo} alt="Footer Logo" />
               </a>
-              <p>{footerLeftDesc}</p>
+              <p className="footer-top-text" dangerouslySetInnerHTML={{ __html: footerLeftDesc }} />
 
               <p className="copy__right" dangerouslySetInnerHTML={{ __html: Copyright }} />
               

@@ -413,6 +413,13 @@
 .phase3Img{
     position: relative;
     max-width: 645px;
+    @include sm{
+        padding:0 10%;
+        margin: 0 auto;
+    }
+    @include ssm{
+        padding:0 5%;
+    }
 }
 
 .moonapp_content{
