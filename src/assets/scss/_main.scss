@@ -438,7 +438,9 @@
     p{
        @include font-48;
        font-family: "Krungthep"; 
-       line-height: 1;
+       line-height: 1.2em;
+       position: relative;
+       z-index: 1;
     }
     
 }
