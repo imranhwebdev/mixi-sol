@@ -45,7 +45,7 @@ export default function MoonMap() {
             <Col md={6}>
               <div className="moonapp_content one">
                 <h3 className='mb-3'>Phase 1</h3>
-                <p>100% $mixi to LP</p>
+                <p>100% $MIXI to LP</p>
                 <figure className='phase__img'>
                     <img src={phase1_img} alt="" />
                 </figure>
